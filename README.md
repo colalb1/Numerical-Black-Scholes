@@ -1,2 +1,2 @@
-# Numerical-Black-Scholes
-Numerical implementation of Black Scholes using a version of Crank-Nicolson that reduces spurious oscillations.
+# Numerical-Black-Scholes-Merton
+Numerical implementation of Black-Scholes-Merton using of Crank-Nicolson with Rannacher smoothing.
