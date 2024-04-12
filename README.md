@@ -58,7 +58,7 @@ There is an issue at the underlying price cross sections at $0$ and $2K$ as they
 
 I do not believe in "close enough," so I will instead say that the TR-BDF2 implementation is accurate up to (exclusive) the first and last space iterations. This imputation showed a negligible difference during error analysis, but there *are* some trivial workarounds to these oscillations.
 
-One may simply increase the upper bound of the grid and add more iterations if they desire a more robust estimate (such as if the underlying is predicted to increase many times its original price). One could also make the grid finer to increase the method's accuracy. Hence, the imputation yields a practically infinitesimal difference (if the underlying likely will not increase more than twice its current price before $T$). I mention these ideas to show that an oscillation at **two** gridpoints is nearly insignificant (since $2 \ll M$).
+One may simply increase the upper bound of the grid and add more iterations if he desires a more robust estimate (such as if the underlying is predicted to increase many times its original price). One could also make the grid finer to increase the method's accuracy. Hence, the imputation yields a practically infinitesimal difference (if the underlying likely will not increase more than twice its current price before $T$). I mention these ideas to show that an oscillation at **two** gridpoints is nearly insignificant (since $2 \ll M$).
 
 To the readers who may have found the issue causing these oscillations, please let me know, and I will fix it.
 <br>
