@@ -52,7 +52,7 @@ b_\ell = -\Delta t\begin{bmatrix} \alpha[1] * V[0, \ell] \\ 0 \\ \vdots \\ 0 \\ 
 ## Trapezoidal Rule with Second-Order Backward Differentiation (TR-BDF2) 
 This method was originally implemented for Black-Scholes in [this](https://chasethedevil.github.io/lefloch_trbdf2_draft.pdf) paper. This was part of Fabien Le Floc’h's Ph.D. dissertation.
 
-The trapezoidal steps are helper values for the BDF2 method and are ghosts on the final grid. I have satisfied all of the main method requirements, which include preprocessing half the grid with Crank-Nicolson, assembling the second-order backward method with the preprocessed grid, and implementing the boundary conditions for the TR and BDF2 steps. The output (without any manipulation) is very similar to the empirical surface. 
+The trapezoidal steps are helper values for the BDF2 method and are ghosts on the final grid. I have satisfied all of the main method requirements, which include preprocessing half the grid with Crank-Nicolson, assembling the second-order backward method with the preprocessed grid, and implementing the boundary conditions for the TR and BDF2 steps.
 
 There is an issue at the underlying price cross sections at $0$ and $2K$ as they each display an oscillation; I imputed these edges with the second-to-last cross-section. Admittedly, this is a hacky fix. I tweaked the boundary conditions and checked my implementation against the formulas written in the paper but was not able to converge on the issue. My assumption is that it stems from the offset values.
 
