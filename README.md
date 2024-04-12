@@ -67,13 +67,13 @@ $$\{0, \alpha, 1, 1 + \alpha, 2, \dots, N - 1, N - 1 + \alpha, N\}$$
 
 The mentioned "intermediate grid" is the sequence of terms with $\alpha$: $\{\alpha, 1 + \alpha, \dots, N - 1 + \alpha\}$. The popular choices for $\alpha$ are $\frac{1}{2}$ and $2 - \sqrt{2}$. According to Le'Floch, $\alpha = \frac{1}{2}$ simplifies the BDF2 discretization, but $\alpha = 2 - \sqrt{2}$ decreases truncation error as this yields proportional Jacobians for the TR and BDF2 steps.
 
-Crank-Nicolson is used to solve for the price at these timesteps before using them for BDF2. One may find the explanation of the Crank-Nicolson discretization in block 1.1.1.
+Crank-Nicolson is used to solve for the price at these timesteps before using them for BDF2. One may find the explanation of the Crank-Nicolson discretization in the CN section.
 
 The discretization of BDF2 yields a system of equations of the form $Pu_{\ell - 1} = Qu_\ell + \frac{1}{\alpha(2 - \alpha)}u_{\ell - \alpha} + \alpha\Delta tb_\ell$ where
 
 $P = \alpha\Delta t * tridiag\left(-u, \frac{1}{\alpha\Delta t} + v, -w\right)$ and $Q = -\frac{(1 - \alpha) ^ 2}{\alpha(2 - \alpha)}I$. 
 
-$u, v, w$ and $b_\ell$ are defined in block 1.1.1.
+$u, v, w$ and $b_\ell$ are defined the CN section.
 
 Modifications to $u, v,$ and $w$ are made to agree with the boundary conditions:
 * $u[0] = 0$
