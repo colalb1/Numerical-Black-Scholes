@@ -21,7 +21,7 @@ Crank-Nicolson is second-order accurate but has spurious oscillations due to its
 The last paragraph of page 107 in this [article](https://www.researchgate.net/publication/228524629_Convergence_analysis_of_Crank-Nicolson_and_Rannacher_time-marching) explains why I used quarter steps for ONE iteration of Rannacher smoothing.
 </br>
 </br>
-The Crank-Nicolson discretization is solved by the following system of equations:
+The following system of equations solves the Crank-Nicolson discretization:
 $$Pu_{\ell - 1} = Qu_\ell + \Delta tb_\ell$$ 
 
 where $P = \Delta t * tridiag\left(-u, \frac{1}{\Delta t} + v, -w\right)$, $Q = \Delta t * tridiag\left(u, \frac{1}{\Delta t} - v, w\right)$
@@ -42,7 +42,7 @@ $P = \Delta t * tridiag\left(\alpha, \frac{1}{\Delta t} + \beta, \gamma\right)$ 
 
 where $\alpha = \frac{S}{2\Delta S}\left(-\frac{\sigma ^ 2 S}{\Delta S} + (r - q)\right)$, $\beta = \frac{1}{\Delta t} + r + \frac{\sigma ^ 2 S ^ 2}{(\Delta S) ^ 2}$, and $\gamma = \frac{S}{2\Delta S}\left(-\frac{\sigma ^ 2 S}{\Delta S} - (r - q)\right)$.
 
-$b_\ell = -\Delta t\begin{bmatrix}\alpha[1] * V[0, \ell]  \\ 0 \\ \vdots \\ 0 \\ \gamma[-1] * V[-1, \ell]\end{bmatrix}$.
+Also, $b_\ell = -\Delta t\begin{bmatrix}\alpha[1] * V[0, \ell]  \\ 0 \\ \vdots \\ 0 \\ \gamma[-1] * V[-1, \ell]\end{bmatrix}$.
 
 
 
