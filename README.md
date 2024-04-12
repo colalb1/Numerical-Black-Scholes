@@ -31,7 +31,7 @@ and $u = \frac{S}{4\Delta S}\left(\frac{\sigma ^ 2 S}{\Delta S} - (r - q)\right)
 
 It appears as two parts in the implementation, but $b_{\ell}$ simplifies to the following:
 
-$$b_\ell = \Delta t\begin{bmatrix}u[1] * (V[0, \ell] + V[0, \ell - 1])  \\ 0 \\ \vdots \\ 0 \\ w[-1] * (V[-1, \ell] + V[-1, \ell - 1])\end{bmatrix}$$
+$$b_\ell = \Delta t\begin{bmatrix} u[1] * (V[0, \ell] + V[0, \ell - 1])  \\\ 0 \\\ \vdots \\\ 0 \\\ w[-1] * (V[-1, \ell] + V[-1, \ell - 1]) \end{bmatrix}$$
 
 where $V[:, \ell - 1]$ is the option price grid at the $\ell - 1$ timestep. I solved by iterating backward, so $V[:, \ell]$ is solved before $V[:, \ell - 1]$.
 </br>
