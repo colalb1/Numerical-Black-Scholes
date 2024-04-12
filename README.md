@@ -21,7 +21,6 @@ Crank-Nicolson is second-order accurate but has spurious oscillations due to its
 The last paragraph of page 107 in this [article](https://www.researchgate.net/publication/228524629_Convergence_analysis_of_Crank-Nicolson_and_Rannacher_time-marching) explains why I used quarter steps for ONE iteration of Rannacher smoothing.
 </br>
 </br>
-</br>
 The Crank-Nicolson discretization is solved by the following system of equations:
 $$Pu_{\ell - 1} = Qu_\ell + \Delta tb_\ell$$ 
 
