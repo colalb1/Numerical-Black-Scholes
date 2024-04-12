@@ -95,8 +95,6 @@ The results seem to highlight the goal of my mini-app as the oscillations in the
 
 In creating this mini-app, I learned how to apply discretization schemes to second-order linear partial differential equations and how various dynamics of the Black-Scholes-Merton equation affect the payoff functions. I have also become much more familiar with novel finite differencing techniques for pricing said equation through literature analysis. I also learned the lesson of patience when implementing techniques described in academic papers.
 
-It seems that CN method with Rannacher smoothing was able to smooth oscillations and provide a more accurate estimate in the process. TR-BDF2 also showed little-to-no oscillations, as desired.
-
 Among the issues that could be improved, the oscillations at the edges of the space grid could be smoothed out in the TR-BDF2 method. TR-BDF2 is a rather uncommon method for pricing options so it was difficult to determine whether the oscillations were caused by an implementation issue or whether they were an artifact of the algorithm. At the time of this writing, there is no other open-source TR-BDF2 implementation that I am aware of. I would also like to extend these methods to different, more exotic, option types to test their accuracy in a variety of contexts.
 
 Future directions for this project include but are not limited to: fixing TR-BDF2 to remove the barrier oscillations, implementing other exotic options to determine which scenarios each method works best in, adding varying risk-free rate and volatility dynamics, and implementing higher-order schemes to achieve greater accuracy.
