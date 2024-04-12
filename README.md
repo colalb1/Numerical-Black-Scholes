@@ -61,8 +61,7 @@ One may simply increase the upper bound of the grid and add more iterations if t
 To the readers who may have found the issue causing these oscillations, please let me know, and I will fix it.
 <br>
 <br>
-<br>
-I will defer a detailed explanation of TR-BDF2 to the article at the top of this code block and will provide a basic explanation instead. TR-BDF2 uses a second-order accurate, fully implicit Runge Kutta timestepping technique for which ghost/intermediate time steps are used to quell accuracy loss using variable timesteps in the standard BDF2 method. Given $N$ time steps, the time grid is structured as follows:
+I will defer a detailed explanation of TR-BDF2 to the article at the top of this section and will provide a basic explanation instead. TR-BDF2 uses a second-order accurate, fully implicit Runge Kutta timestepping technique for which ghost/intermediate time steps are used to quell accuracy loss using variable timesteps in the standard BDF2 method. Given $N$ time steps, the time grid is structured as follows:
 
 $$\{0, \alpha, 1, 1 + \alpha, 2, \dots, N - 1, N - 1 + \alpha, N\}$$
 
